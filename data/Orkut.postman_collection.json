@@ -1,0 +1,624 @@
+{
+	"info": {
+		"_postman_id": "4af89eb5-fcd7-4165-88ef-4528db575af5",
+		"name": "Orkut",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Perfil",
+			"item": [
+				{
+					"name": "Solicitar Amizade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"passageiroId\": 2,\r\n    \"pontoInicial\": {\"x\": 4, \"y\": 8},\r\n    \"pontoFinal\": {\"x\": 10, \"y\": 20}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/perfil/1/solicitar",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"perfil",
+								"1",
+								"solicitar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Desfazer Amizade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"passageiroId\": 2,\r\n    \"pontoInicial\": {\"x\": 4, \"y\": 8},\r\n    \"pontoFinal\": {\"x\": 10, \"y\": 20}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/perfil/1/desfazer",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"perfil",
+								"1",
+								"desfazer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aceitar Amizade",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"pontoInicial\": {\"x\": 20, \"y\": 20},\r\n      \"pontoFinal\": {\"x\": 40, \"y\": 40}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/perfil/1/aceitar",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"perfil",
+								"1",
+								"aceitar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Perfil",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeCompleto\":\"Teste\",\r\n    \"imagemPerfil\":\"url teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/perfil/1/editar",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"perfil",
+								"1",
+								"editar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Todos Usuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/perfil/listar",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"perfil",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Procurar Por Nome Ou Email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/perfil/pesquisa?text=antonios@cwi.com.br",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"perfil",
+								"pesquisa"
+							],
+							"query": [
+								{
+									"key": "text",
+									"value": "antonios@cwi.com.br"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Procurar Por Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/perfil/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"perfil",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/perfil/15/atualizar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"perfil",
+								"15",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login e Cadastro",
+			"item": [
+				{
+					"name": "incluir usuário",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nomeCompleto\": \"Antonio Santana\",\n    \"email\": \"antonios@cwi.com.br\",\n    \"apelido\": \"Tony\",\n    \"senha\": \"123456\",\n    \"dataNascimento\": \"1989-04-30\",\n    \"imagemPerfil\":\"url\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "antonios@cwi.com.br",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "antonios@cwi.com.br",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Criar Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"conteudoEscrito\": \"Meu Primeiro Post No Orkut\",\r\n\"conteudoImagem\": \"url imagem\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/posts/1000000000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"1000000000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comentar Post",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"comentario\": \"Meu Primeiro Comentario\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/posts/1/comentar",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"posts",
+								"1",
+								"comentar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Curtir Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/posts/1/curtir/15",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"1",
+								"curtir",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Todos Posts de Amigos do Usuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/posts/1/listar",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"posts",
+								"1",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Quantidade de curtidas em um post",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/posts/1/curtidas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"1",
+								"curtidas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comentarios de um post",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/comentarios/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comentarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comentar em um Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comentario\":\"TESTEEEEE\",\r\n    \"idUsuario\":15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/comentarios/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comentarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Amizade",
+			"item": [
+				{
+					"name": "Listar Amigos Por Id Usuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/posts/1/listar",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"posts",
+								"1",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Procurar Amigo por Nome ou Email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/amigos/15/procurar/maria",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"amigos",
+								"15",
+								"procurar",
+								"maria"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
